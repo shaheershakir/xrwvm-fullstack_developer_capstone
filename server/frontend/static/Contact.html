@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <!-- Link the style sheet here -->
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="stylesheet" href="/static/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light"
+      style="background-color: darkturquoise; height: 1in"
+    >
+      <div class="container-fluid">
+        <h2 style="padding-right: 5%">Dealerships</h2>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                style="font-size: larger"
+                aria-current="page"
+                href="/"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="font-size: larger" href="/about"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                style="font-size: larger"
+                href="/contact"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div
+      class="card"
+      style="
+        width: 80%;
+        margin: auto;
+        margin-top: 5%;
+        border: 2px solid rgb(85, 84, 84);
+        border-radius: 5%;
+        box-shadow: inset 0 0 10px #000000;
+      "
+    >
+      <div style="width: 50%; margin: 0 auto">
+        <img class="card-img-top" src="/static/cars.jpeg" alt="car image" />
+      </div>
+      <div class="row" style="margin: auto">
+        <div style="margin: 0 auto; width: 25%">
+          <img
+            class="card-img-top"
+            src="/static/contactus.png"
+            alt="contact us"
+          />
+        </div>
+        <div class="banner" name="contact-header">
+          <!-- Insert header information here -->
+          <h1>Contact Us</h1>
+          <p>For any inquiries, please contact us at the following address:</p>
+          <p>
+            Best Cars Dealership
+            <br />
+            1234 Main Street
+            <br />
+            Anytown, USA
+            <br />
+            12345
+          </p>
+          <p>
+            You can also reach us by phone at (123) 456-7890 or by email at <a
+            href="mailto:"dealer@mail.com">
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
