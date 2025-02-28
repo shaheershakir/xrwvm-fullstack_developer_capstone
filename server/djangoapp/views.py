@@ -21,12 +21,11 @@ from .restapis import get_request, analyze_review_sentiments, post_review
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
-
 # Create your views here.
 def get_cars(request):
     count = CarMake.objects.filter().count()
     print(count)
-    if(count == 0):
+    if (count == 0):
         initiate()
     car_models = CarModel.objects.select_related('car_make')
     cars = []
@@ -121,15 +120,17 @@ def get_dealer_details(request, dealer_id):
     else:
         return JsonResponse({"status":400,"message":"Bad Request"})
 
-
+errormessage = "Error in posting review"
 # Create a `add_review` view to submit a review
 def add_review(request):
-    if(request.user.is_anonymous == False):
+    if (request.user.is_anonymous is False):
         data = json.loads(request.body)
         try:
             response = post_review(data)
-            return JsonResponse({"status":200})
+            return JsonResponse(
+                {"status": 200, "review_id": response['review_id']
+                 })
         except:
-            return JsonResponse({"status":401,"message":"Error in posting review"})
+            return JsonResponse({"status": 401, "message" :errormessage})
     else:
-        return JsonResponse({"status":403,"message":"Unauthorized"})
+        return JsonResponse({"status": 403, "message": "Unauthorized"})

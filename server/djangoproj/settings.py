@@ -28,8 +28,13 @@ SECRET_KEY =\
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','127.0.0.1', 'https://shaheershaki-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai']
-CSRF_TRUSTED_ORIGINS = ['https://shaheershaki-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai']
+ALLOWED_HOSTS = [
+  'localhost', '127.0.0.1', 
+  'https://shaheershaki-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai' 
+  ]
+CSRF_TRUSTED_ORIGINS = [
+  'https://shaheershaki-8000.theianext-1-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai'
+  ]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [],
@@ -110,7 +115,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -123,7 +127,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
@@ -143,4 +146,3 @@ STATICFILES_DIRS = [
   os.path.join(BASE_DIR, 'frontend/build'),
   os.path.join(BASE_DIR, 'frontend/build/static'),
 ]
-
